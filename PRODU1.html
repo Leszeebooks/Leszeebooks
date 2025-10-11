@@ -22,27 +22,11 @@ header {
   box-shadow: 0 6px 20px rgba(0,0,0,0.25);
 }
 
-header h1 {
-  font-size: 2.5em;
-  margin: 0;
-  color: #fff;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-}
+header h1 { font-size: 2.5em; margin: 0; color: #fff; text-shadow: 2px 2px 5px rgba(0,0,0,0.3); }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 20px;
-  font-weight: bold;
-  transition: color 0.3s, transform 0.3s;
-}
+nav a { color: white; text-decoration: none; margin: 0 20px; font-weight: bold; transition: color 0.3s, transform 0.3s; }
+nav a:hover { color: #000; transform: scale(1.1); }
 
-nav a:hover {
-  color: #000;
-  transform: scale(1.1);
-}
-
-/* --- Section Produit --- */
 .produit {
   display: flex;
   align-items: center;
@@ -63,45 +47,25 @@ nav a:hover {
   box-shadow: 0 25px 50px rgba(0,0,0,0.3);
 }
 
-.produit img {
-  width: 320px;
-  border-radius: 15px;
-  margin-right: 40px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-}
+.produit img { width: 320px; border-radius: 15px; margin-right: 40px; box-shadow: 0 6px 20px rgba(0,0,0,0.25); }
 
-.description {
-  max-width: 500px;
-}
+.description { max-width: 500px; }
 
-.description h2 {
-  color: #0b3d91;
-  font-size: 2em;
-  margin-bottom: 15px;
-}
+.description h2 { color: #0b3d91; font-size: 2em; margin-bottom: 15px; }
+.description p { font-size: 1.1em; line-height: 1.6; }
 
-.description p {
-  font-size: 1.1em;
-  line-height: 1.6;
-}
-
-/* --- Bouton --- */
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  background: #0b3d91;
+.description button {
+  background-color: #0b3d91;
   color: white;
+  border: none;
   padding: 12px 25px;
-  border-radius: 8px;
-  text-decoration: none;
+  border-radius: 18px;
   font-weight: bold;
-  transition: background 0.3s, transform 0.2s;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  margin-top: 15px;
 }
-
-.btn:hover {
-  background: #062a63;
-  transform: scale(1.05);
-}
+.description button:hover { background-color: #061f4b; transform: scale(1.08); }
 
 footer {
   background-color: #0b3d91;
@@ -112,15 +76,8 @@ footer {
 }
 
 @media(max-width:768px){
-  .produit {
-    flex-direction: column;
-    text-align: center;
-  }
-  .produit img {
-    margin-right: 0;
-    margin-bottom: 25px;
-    width: 80%;
-  }
+  .produit { flex-direction: column; text-align: center; }
+  .produit img { margin-right: 0; margin-bottom: 25px; width: 80%; }
 }
 </style>
 </head>
@@ -139,10 +96,8 @@ footer {
   <img src="image_PRODU1.jpg" alt="Ebook Maigrir Rapidement">
   <div class="description">
     <h2>Maigrir Rapidement</h2>
-    <p>Tu veux perdre du poids sans te sentir frustré ? Ce guide t’aide à retrouver la forme naturellement, sans régime extrême.  
-    Il t’accompagne pas à pas pour mieux manger, bouger un peu plus et garder la motivation.  
-    L’objectif, c’est pas juste maigrir vite — c’est te sentir bien, reprendre confiance et avoir plus d’énergie chaque jour 💪</p>
-    <a href="#" class="btn">Je veux ce guide</a>
+    <p>Découvre une méthode claire, accessible et bienveillante pour perdre du poids durablement. Chaque conseil est élaboré par des experts pour que tu puisses progresser à ton rythme, sans frustration et avec des résultats visibles 💪.</p>
+    <button>Je veux ce guide</button>
   </div>
 </section>
 
@@ -152,8 +107,6 @@ footer {
 
 </body>
 </html>
-
-
 
 
 
