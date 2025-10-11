@@ -69,11 +69,12 @@ nav a:hover { color: #000; transform: scale(1.1); }
 .produits {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 40px;
   padding: 60px 20px;
   max-width: 1300px;
   margin: auto;
+  overflow-x: auto;
 }
 
 .produit {
@@ -86,6 +87,7 @@ nav a:hover { color: #000; transform: scale(1.1); }
   transition: transform 0.4s, box-shadow 0.4s, rotate 0.3s;
   cursor: pointer;
   transform: rotate(-0.5deg);
+  flex: 0 0 auto;
 }
 
 .produit:hover { transform: rotate(0deg) translateY(-12px) scale(1.05); box-shadow: 0 25px 50px rgba(0,0,0,0.3); }
@@ -120,10 +122,12 @@ footer {
 
 /* --- Responsive --- */
 @media(max-width:768px){
-  .produits { flex-direction: column; align-items: center; }
   .intro, .zone-info { padding: 40px 20px; }
   .intro h2 { font-size: 2em; }
   .zone-info h3 { font-size: 1.6em; }
+  .produits { gap: 20px; padding: 20px; }
+  .produit { width: 220px; }
+  .produit img { width: 100%; margin-bottom: 12px; }
 }
 </style>
 </head>
@@ -144,7 +148,7 @@ footer {
 
 <section class="zone-info">
   <h3>Pourquoi choisir Les Zebooks ?</h3>
-  <p>Parce qu’ici, tu n’achètes pas juste un livre numérique : tu trouves un véritable accompagnement. Des conseils pratiques, des astuces concrètes et surtout une approche humaine, pour que chaque page t’aide à avancer à ton rythme 💪</p>
+  <p>Parce qu’ici, tu n’achètes pas simplement un livre numérique : tu bénéficies d’un accompagnement complet. Des conseils pratiques, des astuces concrètes et une approche humaine, pour que chaque page te guide pas à pas vers tes objectifs 💪</p>
 </section>
 
 <section class="produits">
@@ -152,19 +156,19 @@ footer {
     <a href="PRODU1.html">
       <img src="image_PRODU1.jpg" alt="Guide Maigrir Rapidement">
       <h2>Maigrir Rapidement</h2>
-      <p>Une méthode claire, bienveillante et durable pour perdre du poids sans se priver.</p>
+      <p>Une méthode claire, accessible et bienveillante pour perdre du poids durablement sans te priver.</p>
       <p><strong>10€</strong></p>
-      <button>Découvrir</button>
+      <button>Je veux ce guide</button>
     </a>
   </div>
 
- <div class="produit">
+  <div class="produit">
     <a href="PRODU2.html">
       <img src="image_PRODU2.jpg" alt="Montage Vidéo">
       <h2>Montage Vidéo</h2>
-      <p>Apprends à créer des vidéos captivantes avec des explications simples et motivantes 🎬</p>
+      <p>Apprends à créer des vidéos captivantes grâce à un guide pratique, motivant et premium 🎬</p>
       <p><strong>15€</strong></p>
-      <button>Découvrir</button>
+      <button>Je veux ce guide</button>
     </a>
   </div>
 </section>
@@ -174,6 +178,8 @@ footer {
 </footer>
 </body>
 </html>
+
+
 
 
 
