@@ -1,61 +1,139 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Montage Vidéo — Les Zebooks</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nos Ebooks — Montage Vidéo</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 <style>
-  :root{--blue:#0b3d91}
-  *{box-sizing:border-box}
-  body{font-family:'Poppins',sans-serif;margin:0;background:linear-gradient(135deg,#d0e4f7,#fff);color:#222}
-  header{background:linear-gradient(135deg,var(--blue),#fff);padding:18px;text-align:center;color:#fff;box-shadow:0 6px 18px rgba(0,0,0,.12)}
-  nav a{color:#fff;margin:0 12px;font-weight:600;text-decoration:none}
-  .container{max-width:1100px;margin:40px auto;padding:28px;border-radius:18px;background:#fff;box-shadow:0 12px 30px rgba(0,0,0,.08);display:flex;align-items:flex-start;gap:30px;flex-wrap:nowrap}
-  .product-image{flex:0 0 360px;max-width:360px}
-  .product-image img{display:block;width:100%;border-radius:14px}
-  .product-info{flex:1;min-width:0}
-  h1,h2{color:var(--blue);margin:0}
-  p{line-height:1.6;color:#333}
-  .btn{display:inline-block;background:var(--blue);color:#fff;padding:12px 20px;border-radius:12px;border:0;font-weight:700;cursor:pointer;margin-top:12px;text-decoration:none}
-  .btn:hover{background:#061f4b}
-  footer{background:var(--blue);color:#fff;padding:18px;text-align:center;margin-top:30px}
-  @media (max-width:900px){
-    .container{flex-direction:column;flex-wrap:wrap;padding:20px}
-    .product-image{flex:0 0 auto;max-width:100%}
-    .product-image img{width:100%}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #d0e4f7, #ffffff);
+  color: #333;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+header {
+  background: linear-gradient(135deg, #0b3d91, #ffffff);
+  color: white;
+  padding: 25px 0;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin: 0;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+  color: #000;
+  transform: scale(1.1);
+}
+
+/* --- Section Produit --- */
+.produit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: white;
+  border-radius: 25px;
+  padding: 60px;
+  margin: 60px auto;
+  max-width: 1000px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  transform: rotate(-0.5deg);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.produit:hover {
+  transform: rotate(0deg) translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+}
+
+.produit img {
+  width: 320px;
+  border-radius: 15px;
+  margin-right: 40px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+.description {
+  max-width: 500px;
+}
+
+.description h2 {
+  color: #0b3d91;
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.description p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+footer {
+  background-color: #0b3d91;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 50px;
+}
+
+@media(max-width:768px){
+  .produit {
+    flex-direction: column;
+    text-align: center;
   }
+  .produit img {
+    margin-right: 0;
+    margin-bottom: 25px;
+    width: 80%;
+  }
+}
 </style>
 </head>
 <body>
-  <header>
-    <h1>Les Zebooks</h1>
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a href="PRODU1.html">Nos Ebooks</a>
-      <a href="PRODU2.html" class="active">Nos Ebooks</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
 
-  <main class="container" role="main">
-    <div class="product-image">
-      <img src="image_PRODU2.jpg" alt="Couverture Montage Vidéo">
-    </div>
-    <div class="product-info">
-      <h2>Tout savoir sur le montage vidéo</h2>
-      <p>Que tu débutes ou que tu veuilles t’améliorer, ce guide t’accompagne pas à pas pour créer des vidéos percutantes et professionnelles 🎬</p>
-      <p>On t’explique les techniques de façon simple et motivante. Astuces et exercices concrets inclus.</p>
-      <p><strong>15€</strong></p>
-      <a class="btn" href="#">Je veux ce guide</a>
-    </div>
-  </main>
+<header>
+  <h1>Les Zebooks</h1>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="PRODU1.html">Nos Ebooks</a>
+    <a href="PRODU2.html">Montage Vidéo</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-  <footer>
-    <p>Contact : leszebooks@gmail.com — © 2025 Les Zebooks</p>
-  </footer>
+<section class="produit">
+  <img src="image_produit2.jpg" alt="Ebook Montage Vidéo">
+  <div class="description">
+    <h2>Montage Vidéo</h2>
+    <p>Apprends à créer des vidéos captivantes facilement 🎬  
+    Ce guide te montre étape par étape comment monter des vidéos percutantes, gérer les transitions, les effets et améliorer ta créativité tout en t’amusant !</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Les Zebooks — Tous droits réservés</p>
+</footer>
+
 </body>
 </html>
+
 
 
 
