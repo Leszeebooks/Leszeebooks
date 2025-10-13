@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nos Ebooks</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #222;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 15px 25px;
+      display: block;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      border-left: 5px solid #333;
+      padding-left: 10px;
+      font-size: 1.5em;
+    }
+
+    .ebooks {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .ebook {
+      background-color: #fafafa;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+      width: 300px;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .ebook:hover {
+      transform: translateY(-5px);
+    }
+
+    .ebook img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .ebook-content {
+      padding: 15px;
+    }
+
+    .ebook-content h3 {
+      margin-top: 0;
+      font-size: 1.2em;
+      color: #222;
+    }
+
+    .ebook-content p {
+      font-size: 0.95em;
+      color: #555;
+      line-height: 1.5em;
+    }
+
+    @media (max-width: 768px) {
+      .ebooks {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+      }
+
+      .ebook {
+        width: 45%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .ebook {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Nos Ebooks</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="nos-ebooks.html">Nos Ebooks</a>
+    <a href="produit1.html">Produit 1</a>
+    <a href="produit2.html">Produit 2</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="container">
+    <h2>Santé & Bien-être</h2>
+    <div class="ebooks">
+      <div class="ebook">
+        <img src="images/ebook1.jpg" alt="Ebook Santé">
+        <div class="ebook-content">
+          <h3>Vivre mieux au quotidien</h3>
+          <p>Un guide pratique pour améliorer ton énergie, ton sommeil et ton bien-être global grâce à des conseils simples et testés par des experts.</p>
+        </div>
+      </div>
+
+      <div class="ebook">
+        <img src="images/ebook2.jpg" alt="Ebook Santé">
+        <div class="ebook-content">
+          <h3>Nutrition positive</h3>
+          <p>Découvre comment adopter une alimentation équilibrée sans te priver, avec des astuces faciles et accessibles à tous.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Business & Motivation</h2>
+    <div class="ebooks">
+      <div class="ebook">
+        <img src="images/ebook3.jpg" alt="Ebook Business">
+        <div class="ebook-content">
+          <h3>Réussir sans stress</h3>
+          <p>Apprends à atteindre tes objectifs professionnels tout en gardant un équilibre sain entre travail et vie personnelle.</p>
+        </div>
+      </div>
+
+      <div class="ebook">
+        <img src="images/ebook4.jpg" alt="Ebook Business">
+        <div class="ebook-content">
+          <h3>Lancer ton projet</h3>
+          <p>Un ebook concret et inspirant pour apprendre à créer ton business étape par étape, avec des conseils avisés de passionnés du domaine.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Développement personnel</h2>
+    <div class="ebooks">
+      <div class="ebook">
+        <img src="images/ebook5.jpg" alt="Ebook Développement personnel">
+        <div class="ebook-content">
+          <h3>Confiance & équilibre</h3>
+          <p>Découvre comment renforcer ta confiance en toi et créer une vie plus alignée avec tes valeurs et tes envies profondes.</p>
+        </div>
+      </div>
+
+      <div class="ebook">
+        <img src="images/ebook6.jpg" alt="Ebook Développement personnel">
+        <div class="ebook-content">
+          <h3>Le pouvoir des habitudes</h3>
+          <p>Un guide clair pour transformer ton quotidien grâce à des routines simples et efficaces, testées par des personnes motivées comme toi.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
