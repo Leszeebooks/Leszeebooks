@@ -69,19 +69,18 @@ nav a:hover { color: #000; transform: scale(1.1); }
 .produits {
   display: flex;
   justify-content: center;
-  flex-wrap: nowrap;
-  gap: 40px;
+  flex-wrap: wrap;
+  gap: 50px;
   padding: 60px 20px;
-  max-width: 1300px;
+  max-width: 1200px;
   margin: auto;
-  overflow-x: auto;
 }
 
 .produit {
   background: #fff;
   border-radius: 25px;
-  padding: 35px;
-  width: 270px;
+  padding: 30px;
+  width: 230px; /* 📏 réduit la taille des cartes */
   text-align: center;
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
   transition: transform 0.4s, box-shadow 0.4s, rotate 0.3s;
@@ -92,22 +91,22 @@ nav a:hover { color: #000; transform: scale(1.1); }
 
 .produit:hover { transform: rotate(0deg) translateY(-12px) scale(1.05); box-shadow: 0 25px 50px rgba(0,0,0,0.3); }
 
-.produit img { width: 160px; height: auto; border-radius: 15px; margin-bottom: 18px; box-shadow: 0 6px 20px rgba(0,0,0,0.25); }
+.produit img { width: 140px; height: auto; border-radius: 15px; margin-bottom: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.25); }
 
-.produit h2 { color: #0b3d91; font-size: 1.35em; margin: 12px 0; }
+.produit h2 { color: #0b3d91; font-size: 1.2em; margin: 10px 0; }
 
-.produit p { font-size: 1em; margin: 7px 0; }
+.produit p { font-size: 0.95em; margin: 6px 0; }
 
 .produit button {
   background-color: #0b3d91;
   color: white;
   border: none;
-  padding: 12px 25px;
+  padding: 10px 20px;
   border-radius: 18px;
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s, transform 0.3s;
-  margin-top: 12px;
+  margin-top: 10px;
 }
 
 .produit button:hover { background-color: #061f4b; transform: scale(1.08); }
@@ -122,12 +121,12 @@ footer {
 
 /* --- Responsive --- */
 @media(max-width:768px){
-  .intro, .zone-info { padding: 50px 20px; }
+  .intro, .zone-info { padding: 40px 20px; }
   .intro h2 { font-size: 2em; }
   .zone-info h3 { font-size: 1.6em; }
-  .produits { gap: 20px; padding: 20px; flex-wrap: nowrap; overflow-x: auto; }
-  .produit { width: 220px; }
-  .produit img { width: 100%; margin-bottom: 12px; }
+  .produits { flex-direction: column; align-items: center; gap: 25px; }
+  .produit { width: 85%; max-width: 300px; }
+  .produit img { width: 90%; margin-bottom: 12px; }
 }
 </style>
 </head>
@@ -156,7 +155,7 @@ footer {
     <a href="PRODU1.html">
       <img src="image_PRODU1.jpg" alt="Guide Maigrir Rapidement">
       <h2>Maigrir Rapidement</h2>
-      <p>Une méthode claire, accessible et bienveillante pour perdre du poids durablement sans te priver. Avec des conseils avisés par des experts du domaine.</p>
+      <p>Une méthode claire, accessible et bienveillante pour perdre du poids durablement sans te priver.</p>
       <p><strong>10€</strong></p>
       <button>Je veux ce guide</button>
     </a>
@@ -166,7 +165,7 @@ footer {
     <a href="PRODU2.html">
       <img src="image_PRODU2.jpg" alt="Montage Vidéo">
       <h2>Montage Vidéo</h2>
-      <p>Apprends à créer des vidéos captivantes grâce à un guide pratique, motivant et premium 🎬. Des astuces fiables de professionnels pour progresser rapidement.</p>
+      <p>Apprends à créer des vidéos captivantes grâce à un guide pratique, motivant et premium 🎬</p>
       <p><strong>15€</strong></p>
       <button>Je veux ce guide</button>
     </a>
@@ -178,6 +177,8 @@ footer {
 </footer>
 </body>
 </html>
+
+
 
 
 
