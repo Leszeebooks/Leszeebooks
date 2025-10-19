@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Les Zebooks - Accueil</title>
+  <title>Les Zebooks — Accueil</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
@@ -14,8 +14,6 @@
       overflow-x: hidden;
     }
 
-    a { text-decoration: none; color: inherit; }
-
     header {
       background: linear-gradient(135deg, #0b3d91, #ffffff);
       color: white;
@@ -24,85 +22,84 @@
       box-shadow: 0 6px 20px rgba(0,0,0,0.25);
     }
 
-    header h1 { font-size: 2.5em; margin: 0; color: #fff; text-shadow: 2px 2px 5px rgba(0,0,0,0.3); }
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+      color: #fff;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    }
 
     nav a {
       color: white;
+      text-decoration: none;
       margin: 0 20px;
       font-weight: bold;
       transition: color 0.3s, transform 0.3s;
     }
 
-    nav a:hover { color: #000; transform: scale(1.1); }
-
-    .intro {
-      background: linear-gradient(120deg, rgba(11,61,145,0.9), rgba(11,61,145,0.7));
-      color: #fff;
-      padding: 70px 25px;
-      text-align: center;
-      border-radius: 25px;
-      margin: 40px auto;
-      max-width: 1000px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.3);
-      transform: rotate(-0.5deg);
-      transition: transform 0.3s, box-shadow 0.3s;
-      cursor: pointer;
-    }
-
-    .intro:hover { transform: rotate(0deg) translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.35); }
-
-    .intro h2 { margin-bottom: 25px; font-size: 2.6em; }
-
-    .produits {
-      display: flex;
-      justify-content: center;
-      align-items: stretch;
-      flex-wrap: wrap;
-      gap: 25px;
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
+    nav a:hover {
+      color: #000;
+      transform: scale(1.1);
     }
 
     .produit {
-      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: white;
       border-radius: 25px;
-      padding: 25px;
-      width: 230px;
-      text-align: center;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-      transition: transform 0.4s, box-shadow 0.4s;
-      cursor: pointer;
+      padding: 60px;
+      margin: 60px auto;
+      max-width: 1000px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
       transform: rotate(-0.5deg);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    .produit:hover { transform: rotate(0deg) translateY(-12px) scale(1.05); box-shadow: 0 25px 50px rgba(0,0,0,0.3); }
+    .produit:hover {
+      transform: rotate(0deg) translateY(-10px);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+    }
 
     .produit img {
-      width: 140px;
-      height: auto;
+      width: 320px;
       border-radius: 15px;
-      margin-bottom: 15px;
+      margin-right: 40px;
       box-shadow: 0 6px 20px rgba(0,0,0,0.25);
     }
 
-    .produit h2 { color: #0b3d91; font-size: 1.2em; margin: 10px 0; }
+    .description {
+      max-width: 500px;
+    }
 
-    .produit p { font-size: 0.95em; margin: 6px 0; }
+    .description h2 {
+      color: #0b3d91;
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
 
-    .produit button {
+    .description p {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .description button {
       background-color: #0b3d91;
       color: white;
       border: none;
-      padding: 10px 20px;
+      padding: 12px 25px;
       border-radius: 18px;
       font-weight: bold;
       cursor: pointer;
       transition: background 0.3s, transform 0.3s;
-      margin-top: 10px;
+      margin-top: 15px;
     }
 
-    .produit button:hover { background-color: #061f4b; transform: scale(1.08); }
+    .description button:hover {
+      background-color: #061f4b;
+      transform: scale(1.08);
+    }
 
     footer {
       background-color: #0b3d91;
@@ -112,58 +109,56 @@
       margin-top: 50px;
     }
 
-    @media(max-width:768px){
-      .intro { padding: 40px 20px; }
-      .intro h2 { font-size: 2em; }
-      .produits { flex-wrap: wrap; gap: 15px; }
-      .produit { width: 180px; }
-      .produit img { width: 120px; }
-      .produit p { font-size: 0.9em; }
+    @media(max-width:768px) {
+      .produit {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .produit img {
+        margin-right: 0;
+        margin-bottom: 25px;
+        width: 80%;
+      }
     }
   </style>
 </head>
 <body>
-<header>
-  <h1>Les Zebooks</h1>
-  <nav>
-    <a href="index.html">Accueil</a>
-    <a href="nos-ebooks.html">Nos eBooks</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
 
-<section class="intro">
-  <h2>Bienvenue sur Les Zebooks</h2>
-  <p>Découvre nos e-books pensés pour t’aider à évoluer, progresser et t’inspirer chaque jour. Simples, motivants et concrets — ils t’accompagnent à chaque étape 💪📘</p>
-</section>
+  <header>
+    <h1>Les Zebooks</h1>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="PRODU1.html">Nos Ebooks</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<section class="produits">
-  <div class="produit">
-    <a href="produit1.html">
-      <img src="image_PRODU1.jpg" alt="Guide Maigrir Rapidement">
+  <section class="produit">
+    <img src="image_PRODU1.jpg" alt="Ebook Maigrir Rapidement">
+    <div class="description">
       <h2>Maigrir Rapidement</h2>
-      <p>Une méthode claire et bienveillante pour perdre du poids sans te priver, avec des astuces simples à suivre.</p>
-      <p><strong>10€</strong></p>
-      <button>Voir le guide</button>
-    </a>
-  </div>
+      <p>Découvre une méthode claire, accessible et bienveillante pour perdre du poids durablement. Chaque conseil est élaboré par des experts pour que tu puisses progresser à ton rythme, sans frustration et avec des résultats visibles 💪.</p>
+      <button>Je veux ce guide</button>
+    </div>
+  </section>
 
-  <div class="produit">
-    <a href="produit2.html">
-      <img src="image_PRODU2.jpg" alt="Montage Vidéo">
+  <section class="produit">
+    <img src="image_PRODU2.jpg" alt="Ebook Montage Vidéo">
+    <div class="description">
       <h2>Montage Vidéo</h2>
-      <p>Crée des vidéos captivantes et professionnelles grâce à un guide complet et motivant 🎬</p>
-      <p><strong>15€</strong></p>
-      <button>Voir le guide</button>
-    </a>
-  </div>
-</section>
+      <p>Apprends à créer des vidéos captivantes grâce à un guide premium, clair et motivant. Chaque astuce est donnée par des professionnels pour t’aider à maîtriser les techniques et libérer ta créativité 🎬.</p>
+      <button>Je veux ce guide</button>
+    </div>
+  </section>
 
-<footer>
-  <p>Contact : leszebooks@gmail.com — © 2025 Les Zebooks</p>
-</footer>
+  <footer>
+    <p>© 2025 Les Zebooks — Tous droits réservés</p>
+  </footer>
+
 </body>
 </html>
+
 
 
 
