@@ -11,25 +11,19 @@ body { font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, #
 header { background: linear-gradient(135deg, #0b3d91, #ffffff); color: white; padding: 25px 0; text-align: center; box-shadow: 0 6px 20px rgba(0,0,0,0.25); }
 header h1 { font-size: 2.5em; margin: 0; color: #fff; text-shadow: 2px 2px 5px rgba(0,0,0,0.3); }
 nav a { color: white; text-decoration: none; margin: 0 20px; font-weight: bold; transition: color 0.3s, transform 0.3s; }
-nav a:hover { color: #ff6b35; transform: scale(1.1); }
+nav a:hover { color: #000; transform: scale(1.1); }
 .produit { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; background: white; border-radius: 25px; padding: 60px; margin: 60px auto; max-width: 1000px; box-shadow: 0 12px 30px rgba(0,0,0,0.15); transform: rotate(-0.5deg); transition: all 0.3s; }
 .produit:hover { transform: rotate(0deg) translateY(-10px); box-shadow: 0 25px 50px rgba(0,0,0,0.3); }
 .produit img { width: 320px; border-radius: 15px; margin-right: 40px; box-shadow: 0 6px 20px rgba(0,0,0,0.25); }
 .description { max-width: 500px; }
 .description h2 { color: #0b3d91; font-size: 2em; margin-bottom: 15px; }
 .description p { font-size: 1.1em; line-height: 1.6; margin-bottom: 20px; }
-.description button { background-color: #ff6b35; color: white; border: none; padding: 12px 25px; border-radius: 18px; font-weight: bold; cursor: pointer; transition: all 0.3s; margin-top: 15px; }
-.description button:hover { background-color: #e65628; transform: scale(1.08); }
-.temoignage { text-align: center; margin: 30px auto; max-width: 600px; font-style: italic; color: #555; }
-.email-capture { text-align: center; margin: 30px auto; max-width: 500px; padding: 20px; background: white; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
-.email-capture input { width: 70%; padding: 12px; border: 2px solid #d0e4f7; border-radius: 10px; margin-right: 10px; }
-.email-capture button { background-color: #ff6b35; color: white; border: none; padding: 12px 20px; border-radius: 10px; cursor: pointer; font-weight: bold; }
-.email-capture button:hover { background-color: #e65628; }
+.description button { background-color: #0b3d91; color: white; border: none; padding: 12px 25px; border-radius: 18px; font-weight: bold; cursor: pointer; transition: all 0.3s; margin-top: 15px; }
+.description button:hover { background-color: #061f4b; transform: scale(1.08); }
 footer { background-color: #0b3d91; color: white; padding: 20px 0; text-align: center; margin-top: 50px; }
 @media(max-width:768px){
   .produit { flex-direction: column; text-align: center; }
   .produit img { margin-right: 0; margin-bottom: 25px; width: 80%; }
-  .email-capture input { width: 60%; }
 }
 </style>
 </head>
@@ -46,17 +40,11 @@ footer { background-color: #0b3d91; color: white; padding: 20px 0; text-align: c
   <img src="image_PRODU2.jpg" alt="Ebook Montage Vidéo">
   <div class="description">
     <h2>Montage Vidéo</h2>
-    <p>Apprends à créer des vidéos captivantes grâce à un guide premium, clair et motivant. Chaque astuce est donnée par des professionnels pour t’aider à maîtriser les techniques et libérer ta créativité 🎬</p>
-    <div class="temoignage">
-      <p>"Ce guide m’a permis de monter mes premières vidéos pro en moins d’une semaine !" — Thomas, 28 ans</p>
-    </div>
-    <div class="email-capture">
-      <p>Reçois un extrait gratuit en t’abonnant :</p>
-      <form action="https://formspree.io/f/mxxxxx" method="POST">
-        <input type="email" name="email" placeholder="Ton email" required>
-        <button type="submit">Je veux mon extrait</button>
-      </form>
-    </div>
+    <p>
+      Apprends à créer des vidéos captivantes grâce à un guide **premium, clair et motivant**.
+      Ce guide est conçu pour les débutants comme pour les intermédiaires, avec des explications **pas à pas**, des exemples concrets et des astuces pour gagner du temps.
+      Que tu veuilles monter des vidéos pour les réseaux sociaux, YouTube ou des projets personnels, ce guide t’accompagne **de l’idée à la publication finale**, avec des techniques utilisées par les professionnels.
+    </p>
     <button>Je veux ce guide (bientôt disponible)</button>
   </div>
 </section>
@@ -65,9 +53,6 @@ footer { background-color: #0b3d91; color: white; padding: 20px 0; text-align: c
 </footer>
 </body>
 </html>
-
-
-
 
 
 
