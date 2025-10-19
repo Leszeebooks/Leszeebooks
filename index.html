@@ -37,7 +37,7 @@ nav a:hover {
   color: #000;
   transform: scale(1.1);
 }
-/* --- NOUVEAU STYLE POUR LES BOÎTES BLEUES --- */
+/* --- NOUVEAU STYLE POUR LES BOÎTES BLEU → BLANC --- */
 .intro {
   display: flex;
   flex-wrap: wrap;
@@ -48,36 +48,18 @@ nav a:hover {
   padding: 0 20px;
 }
 .intro-box {
-  background: linear-gradient(135deg, #1a5f9a, #0b3d91); /* Dégradé bleu plus profond */
+  background: linear-gradient(135deg, #0b3d91, #d0e4f7); /* Dégradé bleu → blanc */
   color: white;
   flex: 1 1 450px;
   border-radius: 25px;
   padding: 40px 50px;
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Bordure subtile */
-  position: relative;
-  overflow: hidden;
-  transition: all 0.4s ease;
-}
-.intro-box::before {
-  content: '';
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
-  background: linear-gradient(45deg, rgba(100, 200, 255, 0.3), rgba(255, 255, 255, 0.5));
-  z-index: -1;
-  border-radius: 25px;
-  opacity: 0;
-  transition: opacity 0.4s ease;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
 }
 .intro-box:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
-}
-.intro-box:hover::before {
-  opacity: 1; /* Effet de lueur au survol */
+  background: linear-gradient(135deg, #1a68d1, #e6f2ff); /* Changement subtil vers un bleu plus clair */
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 .intro-box h2 {
   font-size: 1.8em;
@@ -92,14 +74,13 @@ nav a:hover {
   left: 0;
   width: 50px;
   height: 3px;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255,255,255,0.7);
 }
 .intro-box p {
   font-size: 1.05em;
   line-height: 1.8;
 }
-/* --- FIN DU NOUVEAU STYLE --- */
-/* --- Section Produits --- */
+/* --- STYLE POUR LES CARTES PRODUITS (bleu clair → blanc) --- */
 .produits {
   display: flex;
   justify-content: center;
@@ -109,16 +90,17 @@ nav a:hover {
 }
 .produit {
   width: 280px;
-  background: white;
+  background: linear-gradient(135deg, #ffffff, #e6f2ff); /* Fond blanc → bleu très clair */
   border-radius: 25px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.15);
   text-align: center;
   padding: 25px;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
 }
 .produit:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+  background: linear-gradient(135deg, #f0f8ff, #b3d9ff); /* Changement vers un bleu encore plus clair */
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
 }
 .produit img {
   width: 100%;
@@ -126,6 +108,10 @@ nav a:hover {
   object-fit: cover;
   border-radius: 20px;
   margin-bottom: 20px;
+  transition: transform 0.3s;
+}
+.produit:hover img {
+  transform: scale(1.02); /* Légère augmentation de l'image */
 }
 .produit h3 {
   color: #0b3d91;
@@ -149,7 +135,7 @@ nav a:hover {
 }
 .produit button:hover {
   background-color: #061f4b;
-  transform: scale(1.08);
+  transform: scale(1.05);
 }
 footer {
   background-color: #0b3d91;
