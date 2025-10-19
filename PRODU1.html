@@ -13,7 +13,6 @@ body {
   margin: 0;
   overflow-x: hidden;
 }
-
 header {
   background: linear-gradient(135deg, #0b3d91, #ffffff);
   color: white;
@@ -21,12 +20,9 @@ header {
   text-align: center;
   box-shadow: 0 6px 20px rgba(0,0,0,0.25);
 }
-
 header h1 { font-size: 2.5em; margin: 0; color: #fff; text-shadow: 2px 2px 5px rgba(0,0,0,0.3); }
-
 nav a { color: white; text-decoration: none; margin: 0 20px; font-weight: bold; transition: color 0.3s, transform 0.3s; }
-nav a:hover { color: #000; transform: scale(1.1); }
-
+nav a:hover { color: #ff6b35; transform: scale(1.1); }
 .produit {
   display: flex;
   align-items: center;
@@ -39,34 +35,47 @@ nav a:hover { color: #000; transform: scale(1.1); }
   max-width: 1000px;
   box-shadow: 0 12px 30px rgba(0,0,0,0.15);
   transform: rotate(-0.5deg);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: all 0.3s;
 }
-
 .produit:hover {
   transform: rotate(0deg) translateY(-10px);
   box-shadow: 0 25px 50px rgba(0,0,0,0.3);
 }
-
 .produit img { width: 320px; border-radius: 15px; margin-right: 40px; box-shadow: 0 6px 20px rgba(0,0,0,0.25); }
-
 .description { max-width: 500px; }
-
 .description h2 { color: #0b3d91; font-size: 2em; margin-bottom: 15px; }
-.description p { font-size: 1.1em; line-height: 1.6; }
-
+.description p { font-size: 1.1em; line-height: 1.6; margin-bottom: 20px; }
 .description button {
-  background-color: #0b3d91;
+  background-color: #ff6b35;
   color: white;
   border: none;
   padding: 12px 25px;
   border-radius: 18px;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s, transform 0.3s;
+  transition: all 0.3s;
   margin-top: 15px;
 }
-.description button:hover { background-color: #061f4b; transform: scale(1.08); }
-
+.description button:hover { background-color: #e65628; transform: scale(1.08); }
+.temoignage {
+  text-align: center;
+  margin: 30px auto;
+  max-width: 600px;
+  font-style: italic;
+  color: #555;
+}
+.email-capture {
+  text-align: center;
+  margin: 30px auto;
+  max-width: 500px;
+  padding: 20px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.email-capture input { width: 70%; padding: 12px; border: 2px solid #d0e4f7; border-radius: 10px; margin-right: 10px; }
+.email-capture button { background-color: #ff6b35; color: white; border: none; padding: 12px 20px; border-radius: 10px; cursor: pointer; font-weight: bold; }
+.email-capture button:hover { background-color: #e65628; }
 footer {
   background-color: #0b3d91;
   color: white;
@@ -74,39 +83,47 @@ footer {
   text-align: center;
   margin-top: 50px;
 }
-
 @media(max-width:768px){
   .produit { flex-direction: column; text-align: center; }
   .produit img { margin-right: 0; margin-bottom: 25px; width: 80%; }
+  .email-capture input { width: 60%; }
 }
 </style>
 </head>
 <body>
-
 <header>
   <h1>Les Zebooks</h1>
   <nav>
-    <a href="index.html">Accueil</a>
-    <a href="PRODU1.html">Nos Ebooks</a>
-    <a href="contact.html">Contact</a>
+    <a href="/Leszeebooks/index.html">Accueil</a>
+    <a href="/Leszeebooks/PRODU1.html">Nos Ebooks</a>
+    <a href="/Leszeebooks/contact.html">Contact</a>
   </nav>
 </header>
-
 <section class="produit">
   <img src="image_PRODU1.jpg" alt="Ebook Maigrir Rapidement">
   <div class="description">
     <h2>Maigrir Rapidement</h2>
     <p>Découvre une méthode claire, accessible et bienveillante pour perdre du poids durablement. Chaque conseil est élaboré par des experts pour que tu puisses progresser à ton rythme, sans frustration et avec des résultats visibles 💪.</p>
-    <button>Je veux ce guide</button>
+    <div class="temoignage">
+      <p>"Grâce à ce guide, j’ai perdu 5 kg en 1 mois sans frustration !" — Marie, 34 ans</p>
+    </div>
+    <div class="email-capture">
+      <p>Reçois un extrait gratuit en t’abonnant :</p>
+      <form action="https://formspree.io/f/mxxxxx" method="POST">
+        <input type="email" name="email" placeholder="Ton email" required>
+        <button type="submit">Je veux mon extrait</button>
+      </form>
+    </div>
+    <button>Je veux ce guide (bientôt disponible)</button>
   </div>
 </section>
-
 <footer>
   <p>© 2025 Les Zebooks — Tous droits réservés</p>
 </footer>
-
 </body>
 </html>
+
+
 
 
 
