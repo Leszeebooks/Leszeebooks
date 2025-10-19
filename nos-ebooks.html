@@ -1,198 +1,212 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nos Ebooks</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos eBooks - Les Zebooks</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #007bff, #00c6ff);
+            color: white;
+        }
 
-    header {
-      background-color: #222;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px 30px;
+        }
 
-    nav {
-      background-color: #333;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      padding: 15px 25px;
-      display: block;
-    }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
 
-    nav a:hover {
-      background-color: #555;
-    }
+        nav a:hover {
+            color: #ffe082;
+        }
 
-    .container {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
 
-    h1 {
-      text-align: center;
-      margin-bottom: 40px;
-    }
+        h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
 
-    h2 {
-      margin-top: 40px;
-      margin-bottom: 20px;
-      border-left: 5px solid #333;
-      padding-left: 10px;
-      font-size: 1.5em;
-    }
+        .category {
+            margin-bottom: 50px;
+        }
 
-    .ebooks {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
-    }
+        .category h3 {
+            text-align: left;
+            border-left: 5px solid #ffe082;
+            padding-left: 10px;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
 
-    .ebook {
-      background-color: #fafafa;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      overflow: hidden;
-      width: 300px;
-      transition: transform 0.2s ease-in-out;
-    }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
 
-    .ebook:hover {
-      transform: translateY(-5px);
-    }
+        .product {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            width: 300px;
+            transition: transform 0.3s, background 0.3s;
+        }
 
-    .ebook img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
+        .product:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.2);
+        }
 
-    .ebook-content {
-      padding: 15px;
-    }
+        .product img {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
 
-    .ebook-content h3 {
-      margin-top: 0;
-      font-size: 1.2em;
-      color: #222;
-    }
+        .product h4 {
+            margin-top: 15px;
+            font-size: 1.2em;
+        }
 
-    .ebook-content p {
-      font-size: 0.95em;
-      color: #555;
-      line-height: 1.5em;
-    }
+        .product p {
+            font-size: 0.95em;
+            line-height: 1.5;
+            margin-top: 10px;
+        }
 
-    @media (max-width: 768px) {
-      .ebooks {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-      }
+        footer {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            font-size: 0.9em;
+            margin-top: 40px;
+        }
 
-      .ebook {
-        width: 45%;
-      }
-    }
+        @media (max-width: 768px) {
+            .product {
+                width: 90%;
+            }
 
-    @media (max-width: 480px) {
-      .ebook {
-        width: 90%;
-      }
-    }
-  </style>
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav {
+                margin-top: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Les Zebooks</h1>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="nos-ebooks.html">Nos eBooks</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-  <header>
-    <h1>Nos Ebooks</h1>
-  </header>
+    <div class="container">
+        <h2>Découvrez nos eBooks triés par catégorie</h2>
 
-  <nav>
-    <a href="index.html">Accueil</a>
-    <a href="nos-ebooks.html">Nos Ebooks</a>
-    <a href="produit1.html">Produit 1</a>
-    <a href="produit2.html">Produit 2</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <div class="container">
-    <h2>Santé & Bien-être</h2>
-    <div class="ebooks">
-      <div class="ebook">
-        <img src="images/ebook1.jpg" alt="Ebook Santé">
-        <div class="ebook-content">
-          <h3>Vivre mieux au quotidien</h3>
-          <p>Un guide pratique pour améliorer ton énergie, ton sommeil et ton bien-être global grâce à des conseils simples et testés par des experts.</p>
+        <!-- Catégorie 1 -->
+        <div class="category">
+            <h3>Santé & Bien-être</h3>
+            <div class="products">
+                <div class="product">
+                    <img src="images/maigrir-rapidement.jpg" alt="Maigrir rapidement">
+                    <h4>Maigrir rapidement</h4>
+                    <p>Des conseils simples et accessibles pour perdre du poids sans frustration. Un guide complet pour ceux qui veulent adopter une routine plus saine et durable, soutenu par des experts du bien-être.</p>
+                </div>
+                <div class="product">
+                    <img src="images/sommeil-reparateur.jpg" alt="Sommeil réparateur">
+                    <h4>Sommeil réparateur</h4>
+                    <p>Apprends à retrouver un vrai repos grâce à des techniques naturelles et efficaces. Idéal pour mieux récupérer et retrouver ton énergie chaque jour.</p>
+                </div>
+                <div class="product">
+                    <img src="images/equilibre-mental.jpg" alt="Équilibre mental">
+                    <h4>Équilibre mental</h4>
+                    <p>Un eBook inspirant pour retrouver la sérénité, réduire le stress et renforcer ta confiance au quotidien, avec des conseils avisés d’experts en psychologie positive.</p>
+                </div>
+            </div>
         </div>
-      </div>
 
-      <div class="ebook">
-        <img src="images/ebook2.jpg" alt="Ebook Santé">
-        <div class="ebook-content">
-          <h3>Nutrition positive</h3>
-          <p>Découvre comment adopter une alimentation équilibrée sans te priver, avec des astuces faciles et accessibles à tous.</p>
+        <!-- Catégorie 2 -->
+        <div class="category">
+            <h3>Développement personnel</h3>
+            <div class="products">
+                <div class="product">
+                    <img src="images/reussir-sa-vie.jpg" alt="Réussir sa vie">
+                    <h4>Réussir sa vie</h4>
+                    <p>Découvre les clés de la réussite personnelle et professionnelle, grâce à des stratégies claires et des exemples inspirants de personnes ayant franchi leurs propres obstacles.</p>
+                </div>
+                <div class="product">
+                    <img src="images/confiance-en-soi.jpg" alt="Confiance en soi">
+                    <h4>Confiance en soi</h4>
+                    <p>Apprends à t’affirmer et à prendre confiance en tes capacités. Des conseils sincères, concrets et applicables dès aujourd’hui.</p>
+                </div>
+                <div class="product">
+                    <img src="images/motivation-quotidienne.jpg" alt="Motivation quotidienne">
+                    <h4>Motivation quotidienne</h4>
+                    <p>Une dose d’énergie et de positivité chaque jour. Cet eBook t’accompagne pour maintenir une motivation durable et avancer vers tes objectifs sans abandonner.</p>
+                </div>
+            </div>
         </div>
-      </div>
+
+        <!-- Catégorie 3 -->
+        <div class="category">
+            <h3>Nutrition & Fitness</h3>
+            <div class="products">
+                <div class="product">
+                    <img src="images/recettes-proteinees.jpg" alt="Recettes protéinées">
+                    <h4>Recettes protéinées</h4>
+                    <p>Des repas savoureux, équilibrés et simples à préparer. Idéal pour ceux qui veulent garder la forme tout en se faisant plaisir.</p>
+                </div>
+                <div class="product">
+                    <img src="images/entrainement-maison.jpg" alt="Entraînement à la maison">
+                    <h4>Entraînement à la maison</h4>
+                    <p>Un programme clair et adapté à tous les niveaux pour progresser sans équipement et transformer ton corps, même depuis ton salon.</p>
+                </div>
+                <div class="product">
+                    <img src="images/alimentation-saine.jpg" alt="Alimentation saine">
+                    <h4>Alimentation saine</h4>
+                    <p>Adopte une alimentation équilibrée et durable, avec des conseils simples à appliquer au quotidien pour améliorer ta santé et ton énergie.</p>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <h2>Business & Motivation</h2>
-    <div class="ebooks">
-      <div class="ebook">
-        <img src="images/ebook3.jpg" alt="Ebook Business">
-        <div class="ebook-content">
-          <h3>Réussir sans stress</h3>
-          <p>Apprends à atteindre tes objectifs professionnels tout en gardant un équilibre sain entre travail et vie personnelle.</p>
-        </div>
-      </div>
-
-      <div class="ebook">
-        <img src="images/ebook4.jpg" alt="Ebook Business">
-        <div class="ebook-content">
-          <h3>Lancer ton projet</h3>
-          <p>Un ebook concret et inspirant pour apprendre à créer ton business étape par étape, avec des conseils avisés de passionnés du domaine.</p>
-        </div>
-      </div>
-    </div>
-
-    <h2>Développement personnel</h2>
-    <div class="ebooks">
-      <div class="ebook">
-        <img src="images/ebook5.jpg" alt="Ebook Développement personnel">
-        <div class="ebook-content">
-          <h3>Confiance & équilibre</h3>
-          <p>Découvre comment renforcer ta confiance en toi et créer une vie plus alignée avec tes valeurs et tes envies profondes.</p>
-        </div>
-      </div>
-
-      <div class="ebook">
-        <img src="images/ebook6.jpg" alt="Ebook Développement personnel">
-        <div class="ebook-content">
-          <h3>Le pouvoir des habitudes</h3>
-          <p>Un guide clair pour transformer ton quotidien grâce à des routines simples et efficaces, testées par des personnes motivées comme toi.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
+    <footer>
+        © 2025 Les Zebooks - Tous droits réservés
+    </footer>
 </body>
 </html>
+
