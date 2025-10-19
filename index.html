@@ -42,30 +42,45 @@ nav a:hover {
   transform: scale(1.1);
 }
 
-/* Section intro */
+/* --- Section Intro améliorée --- */
 .intro {
-  text-align: center;
-  max-width: 900px;
-  margin: 60px auto;
-  padding: 40px;
-  background: white;
-  border-radius: 20px;
-  box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 70px auto 30px;
+  padding: 0 20px;
 }
 
-.intro h2 {
-  color: #0b3d91;
-  font-size: 2em;
+.intro-box {
+  background: linear-gradient(135deg, #0b3d91, #1a68d1);
+  color: white;
+  flex: 1 1 450px;
+  border-radius: 25px;
+  padding: 40px 50px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+  cursor: default;
+}
+
+.intro-box:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.3);
+  background: linear-gradient(135deg, #1a68d1, #0b3d91);
+}
+
+.intro-box h2 {
+  font-size: 1.8em;
   margin-bottom: 15px;
 }
 
-.intro p {
-  font-size: 1.1em;
+.intro-box p {
+  font-size: 1.05em;
   line-height: 1.8;
-  color: #444;
 }
 
-/* Section produits */
+/* --- Section Produits (inchangée) --- */
 .produits {
   display: flex;
   justify-content: center;
@@ -136,6 +151,8 @@ footer {
 @media(max-width:768px){
   .produits { flex-direction: column; align-items: center; }
   .produit { width: 80%; }
+  .intro { flex-direction: column; align-items: center; }
+  .intro-box { width: 90%; }
 }
 </style>
 </head>
@@ -151,19 +168,33 @@ footer {
 </header>
 
 <section class="intro">
-  <h2>Bienvenue sur Les Zebooks</h2>
-  <p>
-    Chez <strong>Les Zebooks</strong>, nous croyons que chaque objectif commence par un bon guide.  
-    Nos e-books sont conçus pour t’aider à évoluer, apprendre et te dépasser, à ton rythme.  
-    Que tu cherches à te remettre en forme, à maîtriser de nouvelles compétences ou à booster ta créativité,  
-    nos experts t’accompagnent pas à pas pour des résultats concrets et durables.
-  </p>
-  <p>
-    🌟 <strong>Pourquoi choisir nos e-books ?</strong><br>
-    ✅ Des conseils clairs et applicables<br>
-    ✅ Un ton humain, motivant et bienveillant<br>
-    ✅ Des contenus exclusifs créés par des passionnés
-  </p>
+  <div class="intro-box">
+    <h2>Notre mission</h2>
+    <p>
+      Chez <strong>Les Zebooks</strong>, notre mission est simple : te donner les bons outils pour évoluer.  
+      Nous créons des e-books accessibles, inspirants et concrets, pensés pour t’aider à atteindre tes objectifs.  
+      Pas de discours compliqués — seulement des conseils réels, des stratégies efficaces et des méthodes testées.
+    </p>
+    <p>
+      Chaque guide est rédigé par des passionnés qui comprennent ce que c’est que de vouloir progresser,  
+      étape par étape, sans se perdre dans des promesses irréalistes.  
+      Nous t’aidons à te construire, à ton rythme, avec des bases solides.
+    </p>
+  </div>
+
+  <div class="intro-box">
+    <h2>Pourquoi choisir Les Zebooks ?</h2>
+    <p>
+      💡 Parce que nous croyons à une approche humaine et motivante.  
+      Nos e-books sont pensés pour t’accompagner dans la durée, te motiver et t’apprendre à vraiment réussir.  
+      Chaque page est claire, bienveillante et te pousse à passer à l’action sans stress ni pression.
+    </p>
+    <p>
+      Que tu veuilles te remettre en forme, développer de nouvelles compétences ou te lancer dans un projet créatif,  
+      <strong>Les Zebooks</strong> t’accompagne avec passion, clarté et authenticité.  
+      Tu n’achètes pas juste un e-book — tu découvres une expérience d’apprentissage personnalisée.
+    </p>
+  </div>
 </section>
 
 <section class="produits">
@@ -188,6 +219,8 @@ footer {
 
 </body>
 </html>
+
+
 
 
 
