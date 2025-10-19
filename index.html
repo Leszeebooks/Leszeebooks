@@ -13,7 +13,6 @@ body {
   margin: 0;
   overflow-x: hidden;
 }
-
 header {
   background: linear-gradient(135deg, #0b3d91, #ffffff);
   color: white;
@@ -21,14 +20,12 @@ header {
   text-align: center;
   box-shadow: 0 6px 20px rgba(0,0,0,0.25);
 }
-
 header h1 {
   font-size: 2.5em;
   margin: 0;
   color: #fff;
   text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
 }
-
 nav a {
   color: white;
   text-decoration: none;
@@ -36,13 +33,11 @@ nav a {
   font-weight: bold;
   transition: color 0.3s, transform 0.3s;
 }
-
 nav a:hover {
-  color: #000;
+  color: #ff6b35;
   transform: scale(1.1);
 }
-
-/* --- Section Intro améliorée --- */
+/* --- Section Intro --- */
 .intro {
   display: flex;
   flex-wrap: wrap;
@@ -52,7 +47,6 @@ nav a:hover {
   margin: 70px auto 30px;
   padding: 0 20px;
 }
-
 .intro-box {
   background: linear-gradient(135deg, #0b3d91, #1a68d1);
   color: white;
@@ -60,27 +54,21 @@ nav a:hover {
   border-radius: 25px;
   padding: 40px 50px;
   box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
-  cursor: default;
+  transition: all 0.4s ease;
 }
-
 .intro-box:hover {
-  transform: translateY(-10px) scale(1.02);
+  transform: translateY(-10px);
   box-shadow: 0 20px 45px rgba(0,0,0,0.3);
-  background: linear-gradient(135deg, #1a68d1, #0b3d91);
 }
-
 .intro-box h2 {
   font-size: 1.8em;
   margin-bottom: 15px;
 }
-
 .intro-box p {
   font-size: 1.05em;
   line-height: 1.8;
 }
-
-/* --- Section Produits (inchangée) --- */
+/* --- Section Produits --- */
 .produits {
   display: flex;
   justify-content: center;
@@ -88,7 +76,6 @@ nav a:hover {
   flex-wrap: wrap;
   padding: 40px 0;
 }
-
 .produit {
   width: 280px;
   background: white;
@@ -96,14 +83,12 @@ nav a:hover {
   box-shadow: 0 8px 25px rgba(0,0,0,0.15);
   text-align: center;
   padding: 25px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: all 0.3s;
 }
-
 .produit:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 40px rgba(0,0,0,0.25);
 }
-
 .produit img {
   width: 100%;
   height: 380px;
@@ -111,35 +96,59 @@ nav a:hover {
   border-radius: 20px;
   margin-bottom: 20px;
 }
-
 .produit h3 {
   color: #0b3d91;
   font-size: 1.4em;
   margin-bottom: 10px;
 }
-
 .produit p {
   font-size: 1em;
   color: #555;
   margin-bottom: 15px;
 }
-
 .produit button {
-  background-color: #0b3d91;
+  background-color: #ff6b35;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 20px;
   border-radius: 18px;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s, transform 0.3s;
+  transition: all 0.3s;
 }
-
 .produit button:hover {
-  background-color: #061f4b;
+  background-color: #e65628;
   transform: scale(1.08);
 }
-
+/* --- Formulaire Email --- */
+.email-capture {
+  text-align: center;
+  margin: 40px auto;
+  max-width: 500px;
+  padding: 20px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.email-capture input {
+  width: 70%;
+  padding: 12px;
+  border: 2px solid #d0e4f7;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+.email-capture button {
+  background-color: #ff6b35;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.email-capture button:hover {
+  background-color: #e65628;
+}
 footer {
   background-color: #0b3d91;
   color: white;
@@ -147,78 +156,68 @@ footer {
   text-align: center;
   margin-top: 50px;
 }
-
 @media(max-width:768px){
   .produits { flex-direction: column; align-items: center; }
   .produit { width: 80%; }
   .intro { flex-direction: column; align-items: center; }
   .intro-box { width: 90%; }
+  .email-capture input { width: 60%; }
 }
 </style>
 </head>
 <body>
-
 <header>
   <h1>Les Zebooks</h1>
   <nav>
-    <a href="index.html">Accueil</a>
-    <a href="PRODU1.html">Nos Ebooks</a>
-    <a href="contact.html">Contact</a>
+    <a href="/Leszeebooks/index.html">Accueil</a>
+    <a href="/Leszeebooks/PRODU1.html">Nos Ebooks</a>
+    <a href="/Leszeebooks/contact.html">Contact</a>
   </nav>
 </header>
-
 <section class="intro">
   <div class="intro-box">
     <h2>Notre mission</h2>
     <p>
-      Chez <strong>Les Zebooks</strong>, notre mission est simple : te donner les bons outils pour évoluer.  
-      Nous créons des e-books accessibles, inspirants et concrets, pensés pour t’aider à atteindre tes objectifs.  
-      Pas de discours compliqués — seulement des conseils réels, des stratégies efficaces et des méthodes testées.
-    </p>
-    <p>
-      Chaque guide est rédigé par des passionnés qui comprennent ce que c’est que de vouloir progresser,  
-      étape par étape, sans se perdre dans des promesses irréalistes.  
-      Nous t’aidons à te construire, à ton rythme, avec des bases solides.
+      Chez <strong>Les Zebooks</strong>, notre mission est simple : te donner les bons outils pour évoluer.
+      Nous créons des e-books accessibles, inspirants et concrets, pensés pour t’aider à atteindre tes objectifs.
     </p>
   </div>
-
   <div class="intro-box">
-    <h2>Pourquoi choisir Les Zebooks ?</h2>
+    <h2>Pourquoi nous choisir ?</h2>
     <p>
-      💡 Parce que nous croyons à une approche humaine et motivante.  
-      Nos e-books sont pensés pour t’accompagner dans la durée, te motiver et t’apprendre à vraiment réussir.  
-      Chaque page est claire, bienveillante et te pousse à passer à l’action sans stress ni pression.
-    </p>
-    <p>
-      Que tu veuilles te remettre en forme, développer de nouvelles compétences ou te lancer dans un projet créatif,  
-      <strong>Les Zebooks</strong> t’accompagne avec passion, clarté et authenticité.  
-      Tu n’achètes pas juste un e-book — tu découvres une expérience d’apprentissage personnalisée.
+      💡 Parce que nous croyons à une approche humaine et motivante.
+      Nos e-books sont pensés pour t’accompagner dans la durée, te motiver et t’apprendre à vraiment réussir.
     </p>
   </div>
 </section>
-
+<!-- Formulaire de capture d'email -->
+<div class="email-capture">
+  <p>Reçois nos meilleurs conseils et une offre exclusive en t’abonnant :</p>
+  <form action="https://formspree.io/f/mxxxxx" method="POST">
+    <input type="email" name="email" placeholder="Ton email" required>
+    <button type="submit">Je veux mon offre</button>
+  </form>
+</div>
 <section class="produits">
   <div class="produit">
     <img src="image_PRODU1.jpg" alt="Ebook Maigrir Rapidement">
     <h3>Maigrir Rapidement</h3>
     <p>Découvre une méthode simple, motivante et efficace pour perdre du poids durablement 💪</p>
-    <button onclick="window.location.href='PRODU1.html'">Voir le guide</button>
+    <button onclick="window.location.href='/Leszeebooks/PRODU1.html'">Découvrir le guide</button>
   </div>
-
   <div class="produit">
     <img src="image_PRODU2.jpg" alt="Ebook Montage Vidéo">
     <h3>Montage Vidéo</h3>
     <p>Apprends à créer des vidéos captivantes et professionnelles grâce à nos astuces 🎬</p>
-    <button onclick="window.location.href='PRODU2.html'">Voir le guide</button>
+    <button onclick="window.location.href='/Leszeebooks/PRODU2.html'">Découvrir le guide</button>
   </div>
 </section>
-
 <footer>
   <p>© 2025 Les Zebooks — Tous droits réservés</p>
 </footer>
-
 </body>
 </html>
+
 
 
 
