@@ -34,7 +34,7 @@ nav a {
   transition: color 0.3s, transform 0.3s;
 }
 nav a:hover {
-  color: #ff6b35;
+  color: #000; /* Noir au survol */
   transform: scale(1.1);
 }
 /* --- Section Intro --- */
@@ -107,7 +107,7 @@ nav a:hover {
   margin-bottom: 15px;
 }
 .produit button {
-  background-color: #ff6b35;
+  background-color: #0b3d91; /* Bleu comme avant */
   color: white;
   border: none;
   padding: 12px 20px;
@@ -117,37 +117,8 @@ nav a:hover {
   transition: all 0.3s;
 }
 .produit button:hover {
-  background-color: #e65628;
+  background-color: #061f4b; /* Bleu plus foncé au survol */
   transform: scale(1.08);
-}
-/* --- Formulaire Email --- */
-.email-capture {
-  text-align: center;
-  margin: 40px auto;
-  max-width: 500px;
-  padding: 20px;
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-.email-capture input {
-  width: 70%;
-  padding: 12px;
-  border: 2px solid #d0e4f7;
-  border-radius: 10px;
-  margin-right: 10px;
-}
-.email-capture button {
-  background-color: #ff6b35;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: bold;
-}
-.email-capture button:hover {
-  background-color: #e65628;
 }
 footer {
   background-color: #0b3d91;
@@ -161,7 +132,6 @@ footer {
   .produit { width: 80%; }
   .intro { flex-direction: column; align-items: center; }
   .intro-box { width: 90%; }
-  .email-capture input { width: 60%; }
 }
 </style>
 </head>
@@ -190,25 +160,17 @@ footer {
     </p>
   </div>
 </section>
-<!-- Formulaire de capture d'email -->
-<div class="email-capture">
-  <p>Reçois nos meilleurs conseils et une offre exclusive en t’abonnant :</p>
-  <form action="https://formspree.io/f/mxxxxx" method="POST">
-    <input type="email" name="email" placeholder="Ton email" required>
-    <button type="submit">Je veux mon offre</button>
-  </form>
-</div>
 <section class="produits">
   <div class="produit">
     <img src="image_PRODU1.jpg" alt="Ebook Maigrir Rapidement">
     <h3>Maigrir Rapidement</h3>
-    <p>Découvre une méthode simple, motivante et efficace pour perdre du poids durablement 💪</p>
+    <p>Découvre une méthode simple, motivante et efficace pour perdre du poids durablement 💪. Ce guide te propose des étapes claires, des astuces pratiques et une approche bienveillante pour des résultats visibles sans frustration.</p>
     <button onclick="window.location.href='/Leszeebooks/PRODU1.html'">Découvrir le guide</button>
   </div>
   <div class="produit">
     <img src="image_PRODU2.jpg" alt="Ebook Montage Vidéo">
     <h3>Montage Vidéo</h3>
-    <p>Apprends à créer des vidéos captivantes et professionnelles grâce à nos astuces 🎬</p>
+    <p>Apprends à créer des vidéos captivantes grâce à un guide premium, clair et motivant. Chaque astuce est expliquée pas à pas pour t’aider à maîtriser les techniques et libérer ta créativité, même si tu débutes 🎬.</p>
     <button onclick="window.location.href='/Leszeebooks/PRODU2.html'">Découvrir le guide</button>
   </div>
 </section>
@@ -217,6 +179,7 @@ footer {
 </footer>
 </body>
 </html>
+
 
 
 
