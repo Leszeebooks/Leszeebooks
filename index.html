@@ -37,7 +37,7 @@ nav a:hover {
   color: #000;
   transform: scale(1.1);
 }
-/* --- NOUVEAU STYLE POUR LES BOÎTES BLEU FONCÉ → BLANC --- */
+/* --- BOÎTES D'ACCUEIL (dégradé bleu → blanc) --- */
 .intro {
   display: flex;
   flex-wrap: wrap;
@@ -48,17 +48,12 @@ nav a:hover {
   padding: 0 20px;
 }
 .intro-box {
-  background: linear-gradient(135deg, #0a2e5a, #d0e4f7); /* Dégradé bleu foncé → blanc bien visible */
+  background: linear-gradient(135deg, #0b3d91, #ffffff); /* Dégradé bleu menu → blanc */
   color: white;
   flex: 1 1 450px;
   border-radius: 25px;
   padding: 40px 50px;
   box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease; /* Seule la taille change au survol */
-}
-.intro-box:hover {
-  transform: scale(1.02); /* Effet d'agrandissement léger */
-  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 .intro-box h2 {
   font-size: 1.8em;
@@ -79,7 +74,7 @@ nav a:hover {
   font-size: 1.05em;
   line-height: 1.8;
 }
-/* --- STYLE POUR LES CARTES PRODUITS (même effet) --- */
+/* --- SECTION PRODUITS (style de base) --- */
 .produits {
   display: flex;
   justify-content: center;
@@ -89,16 +84,15 @@ nav a:hover {
 }
 .produit {
   width: 280px;
-  background: linear-gradient(135deg, #ffffff, #e6f2ff); /* Fond blanc → bleu très clair */
+  background: white;
   border-radius: 25px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.15);
   text-align: center;
   padding: 25px;
-  transition: transform 0.3s ease; /* Seule la taille change au survol */
+  transition: transform 0.3s;
 }
 .produit:hover {
-  transform: scale(1.02); /* Effet d'agrandissement léger */
-  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+  transform: translateY(-5px);
 }
 .produit img {
   width: 100%;
@@ -125,11 +119,10 @@ nav a:hover {
   border-radius: 18px;
   font-weight: bold;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: background 0.3s;
 }
 .produit button:hover {
   background-color: #061f4b;
-  transform: scale(1.05);
 }
 footer {
   background-color: #0b3d91;
@@ -159,15 +152,17 @@ footer {
   <div class="intro-box">
     <h2>Notre mission</h2>
     <p>
-      Chez <strong>Les Zebooks</strong>, notre mission est simple : te donner les bons outils pour évoluer.
-      Nous créons des e-books accessibles, inspirants et concrets, pensés pour t’aider à atteindre tes objectifs.
+      Chez <strong>Les Zebooks</strong>, notre mission est de te fournir des outils <strong>concrets et accessibles</strong> pour t’aider à atteindre tes objectifs.
+      Nos e-books sont conçus pour être <strong>simples, motivants et efficaces</strong>, sans jargon compliqué.
+      Que tu veuilles perdre du poids, apprendre une nouvelle compétence ou te lancer dans un projet, nous t’accompagnons avec des méthodes <strong>testées et adaptées</strong> à ton rythme.
     </p>
   </div>
   <div class="intro-box">
     <h2>Pourquoi nous choisir ?</h2>
     <p>
-      💡 Parce que nous croyons à une approche humaine et motivante.
-      Nos e-books sont pensés pour t’accompagner dans la durée, te motiver et t’apprendre à vraiment réussir.
+      💡 <strong>Une approche humaine</strong> : Nos guides sont écrits par des passionnés qui comprennent tes défis.
+      📚 <strong>Des conseils clairs</strong> : Pas de théorie inutile, seulement des étapes pratiques pour des résultats visibles.
+      🌟 <strong>Un accompagnement bienveillant</strong> : Nous croyons en ta capacité à réussir, et nos e-books te donnent les clés pour y parvenir <strong>sans stress ni pression</strong>.
     </p>
   </div>
 </section>
@@ -175,13 +170,13 @@ footer {
   <div class="produit">
     <img src="image_PRODU1.jpg" alt="Ebook Maigrir Rapidement">
     <h3>Maigrir Rapidement</h3>
-    <p>Découvre une méthode simple, motivante et efficace pour perdre du poids durablement 💪. Ce guide te propose des étapes claires, des astuces pratiques et une approche bienveillante pour des résultats visibles sans frustration.</p>
+    <p>Découvre une méthode simple et efficace pour perdre du poids durablement, sans frustration.</p>
     <button onclick="window.location.href='/Leszeebooks/PRODU1.html'">Découvrir le guide</button>
   </div>
   <div class="produit">
     <img src="image_PRODU2.jpg" alt="Ebook Montage Vidéo">
     <h3>Montage Vidéo</h3>
-    <p>Apprends à créer des vidéos captivantes grâce à un guide premium, clair et motivant. Chaque astuce est expliquée pas à pas pour t’aider à maîtriser les techniques et libérer ta créativité, même si tu débutes 🎬.</p>
+    <p>Apprends à monter des vidéos professionnelles avec des techniques accessibles à tous.</p>
     <button onclick="window.location.href='/Leszeebooks/PRODU2.html'">Découvrir le guide</button>
   </div>
 </section>
@@ -190,6 +185,7 @@ footer {
 </footer>
 </body>
 </html>
+
 
 
 
