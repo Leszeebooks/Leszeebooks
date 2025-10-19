@@ -1,177 +1,195 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Les Zebooks — Accueil</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #d0e4f7, #ffffff);
-      color: #333;
-      margin: 0;
-      overflow-x: hidden;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Les Zebooks — Accueil</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #d0e4f7, #ffffff);
+  color: #333;
+  margin: 0;
+  overflow-x: hidden;
+}
 
-    header {
-      background: linear-gradient(135deg, #0b3d91, #ffffff);
-      color: white;
-      padding: 25px 0;
-      text-align: center;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-    }
+header {
+  background: linear-gradient(135deg, #0b3d91, #ffffff);
+  color: white;
+  padding: 25px 0;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
 
-    header h1 {
-      font-size: 2.5em;
-      margin: 0;
-      color: #fff;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-    }
+header h1 {
+  font-size: 2.5em;
+  margin: 0;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 20px;
-      font-weight: bold;
-      transition: color 0.3s, transform 0.3s;
-    }
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s;
+}
 
-    nav a:hover {
-      color: #000;
-      transform: scale(1.1);
-    }
+nav a:hover {
+  color: #000;
+  transform: scale(1.1);
+}
 
-    .produits {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
-      padding: 50px 20px;
-    }
+/* Section intro */
+.intro {
+  text-align: center;
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
 
-    .produit {
-      background: white;
-      border-radius: 50%;
-      width: 320px;
-      height: 320px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
+.intro h2 {
+  color: #0b3d91;
+  font-size: 2em;
+  margin-bottom: 15px;
+}
 
-    .produit:hover {
-      transform: translateY(-10px) scale(1.05);
-      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
-    }
+.intro p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #444;
+}
 
-    .produit img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
+/* Section produits */
+.produits {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 40px 0;
+}
 
-    .produit h2 {
-      color: #0b3d91;
-      margin: 10px 0 5px;
-      font-size: 1.5em;
-    }
+.produit {
+  width: 280px;
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  text-align: center;
+  padding: 25px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
 
-    .produit p {
-      font-size: 0.95em;
-      padding: 0 15px;
-      line-height: 1.4;
-    }
+.produit:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
 
-    .produit a {
-      text-decoration: none;
-      background-color: #0b3d91;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 20px;
-      font-weight: bold;
-      margin-top: 10px;
-      transition: background 0.3s, transform 0.3s;
-    }
+.produit img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
 
-    .produit a:hover {
-      background-color: #061f4b;
-      transform: scale(1.08);
-    }
+.produit h3 {
+  color: #0b3d91;
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
 
-    footer {
-      background-color: #0b3d91;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-      margin-top: 50px;
-    }
+.produit p {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 15px;
+}
 
-    @media(max-width:768px) {
-      .produits {
-        flex-direction: column;
-        align-items: center;
-      }
+.produit button {
+  background-color: #0b3d91;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
 
-      .produit {
-        width: 260px;
-        height: 260px;
-      }
+.produit button:hover {
+  background-color: #061f4b;
+  transform: scale(1.08);
+}
 
-      .produit img {
-        width: 90px;
-        height: 90px;
-      }
+footer {
+  background-color: #0b3d91;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 50px;
+}
 
-      .produit h2 {
-        font-size: 1.3em;
-      }
-
-      .produit p {
-        font-size: 0.9em;
-      }
-    }
-  </style>
+@media(max-width:768px){
+  .produits { flex-direction: column; align-items: center; }
+  .produit { width: 80%; }
+}
+</style>
 </head>
 <body>
 
-  <header>
-    <h1>Les Zebooks</h1>
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a href="PRODU1.html">Nos Ebooks</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+<header>
+  <h1>Les Zebooks</h1>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="PRODU1.html">Nos Ebooks</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-  <section class="produits">
-    <div class="produit">
-      <img src="image_PRODU1.jpg" alt="Ebook Maigrir Rapidement">
-      <h2>Maigrir Rapidement</h2>
-      <p>Découvre une méthode claire, accessible et bienveillante pour perdre du poids durablement. Des conseils simples, efficaces et motivants 💪.</p>
-      <a href="PRODU1.html">Découvrir</a>
-    </div>
+<section class="intro">
+  <h2>Bienvenue sur Les Zebooks</h2>
+  <p>
+    Chez <strong>Les Zebooks</strong>, nous croyons que chaque objectif commence par un bon guide.  
+    Nos e-books sont conçus pour t’aider à évoluer, apprendre et te dépasser, à ton rythme.  
+    Que tu cherches à te remettre en forme, à maîtriser de nouvelles compétences ou à booster ta créativité,  
+    nos experts t’accompagnent pas à pas pour des résultats concrets et durables.
+  </p>
+  <p>
+    🌟 <strong>Pourquoi choisir nos e-books ?</strong><br>
+    ✅ Des conseils clairs et applicables<br>
+    ✅ Un ton humain, motivant et bienveillant<br>
+    ✅ Des contenus exclusifs créés par des passionnés
+  </p>
+</section>
 
-    <div class="produit">
-      <img src="image_PRODU2.jpg" alt="Ebook Montage Vidéo">
-      <h2>Montage Vidéo</h2>
-      <p>Apprends à créer des vidéos captivantes grâce à des astuces professionnelles et faciles à suivre 🎬. Laisse libre cours à ta créativité !</p>
-      <a href="PRODU2.html">Découvrir</a>
-    </div>
-  </section>
+<section class="produits">
+  <div class="produit">
+    <img src="image_PRODU1.jpg" alt="Ebook Maigrir Rapidement">
+    <h3>Maigrir Rapidement</h3>
+    <p>Découvre une méthode simple, motivante et efficace pour perdre du poids durablement 💪</p>
+    <button onclick="window.location.href='PRODU1.html'">Voir le guide</button>
+  </div>
 
-  <footer>
-    <p>© 2025 Les Zebooks — Tous droits réservés</p>
-  </footer>
+  <div class="produit">
+    <img src="image_PRODU2.jpg" alt="Ebook Montage Vidéo">
+    <h3>Montage Vidéo</h3>
+    <p>Apprends à créer des vidéos captivantes et professionnelles grâce à nos astuces 🎬</p>
+    <button onclick="window.location.href='PRODU2.html'">Voir le guide</button>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Les Zebooks — Tous droits réservés</p>
+</footer>
 
 </body>
 </html>
+
+
 
 
 
