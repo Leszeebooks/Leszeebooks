@@ -1,187 +1,160 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Les Zebooks</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-<style>
-body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #d0e4f7, #ffffff);
-  color: #333;
-  margin: 0;
-  overflow-x: hidden;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les Zebooks - Accueil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #d0e4f7, #ffffff);
+      color: #333;
+      margin: 0;
+      overflow-x: hidden;
+    }
 
-a { text-decoration: none; color: inherit; }
+    a { text-decoration: none; color: inherit; }
 
-header {
-  background: linear-gradient(135deg, #0b3d91, #ffffff);
-  color: white;
-  padding: 25px 0;
-  text-align: center;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-}
+    header {
+      background: linear-gradient(135deg, #0b3d91, #ffffff);
+      color: white;
+      padding: 25px 0;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    }
 
-header h1 { font-size: 2.5em; margin: 0; color: #fff; text-shadow: 2px 2px 5px rgba(0,0,0,0.3); }
+    header h1 { font-size: 2.5em; margin: 0; color: #fff; text-shadow: 2px 2px 5px rgba(0,0,0,0.3); }
 
-nav a {
-  color: white;
-  margin: 0 20px;
-  font-weight: bold;
-  transition: color 0.3s, transform 0.3s;
-}
+    nav a {
+      color: white;
+      margin: 0 20px;
+      font-weight: bold;
+      transition: color 0.3s, transform 0.3s;
+    }
 
-nav a:hover { color: #000; transform: scale(1.1); }
+    nav a:hover { color: #000; transform: scale(1.1); }
 
-.intro {
-  background: linear-gradient(120deg, rgba(11,61,145,0.9), rgba(11,61,145,0.7));
-  color: #fff;
-  padding: 70px 25px;
-  text-align: center;
-  border-radius: 25px;
-  margin: 40px auto;
-  max-width: 1000px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
-  transform: rotate(-0.5deg);
-  transition: transform 0.3s, box-shadow 0.3s;
-  cursor: pointer;
-}
-.intro:hover { transform: rotate(0deg) translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.35); }
+    .intro {
+      background: linear-gradient(120deg, rgba(11,61,145,0.9), rgba(11,61,145,0.7));
+      color: #fff;
+      padding: 70px 25px;
+      text-align: center;
+      border-radius: 25px;
+      margin: 40px auto;
+      max-width: 1000px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+      transform: rotate(-0.5deg);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
 
-.intro h2 { margin-bottom: 25px; font-size: 2.6em; }
+    .intro:hover { transform: rotate(0deg) translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.35); }
 
-.zone-info {
-  background: linear-gradient(145deg, rgba(255,255,255,0.95), rgba(240,240,240,0.95));
-  border-radius: 25px;
-  padding: 60px 40px;
-  margin: 40px auto;
-  max-width: 1000px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-  transform: rotate(0.5deg);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.zone-info:hover { transform: rotate(0deg) translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.25); }
+    .intro h2 { margin-bottom: 25px; font-size: 2.6em; }
 
-.zone-info h3 { color: #0b3d91; margin-bottom: 25px; font-size: 2em; }
+    .produits {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      flex-wrap: wrap;
+      gap: 25px;
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
 
-.produits {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  flex-wrap: nowrap;
-  gap: 25px;
-  padding: 60px 20px;
-  max-width: 1000px;
-  margin: auto;
-  overflow-x: auto;
-}
+    .produit {
+      background: #fff;
+      border-radius: 25px;
+      padding: 25px;
+      width: 230px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      transition: transform 0.4s, box-shadow 0.4s;
+      cursor: pointer;
+      transform: rotate(-0.5deg);
+    }
 
-.produit {
-  background: #fff;
-  border-radius: 25px;
-  padding: 25px;
-  width: 230px;
-  text-align: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  transition: transform 0.4s, box-shadow 0.4s;
-  cursor: pointer;
-  transform: rotate(-0.5deg);
-  flex: 0 0 auto;
-}
+    .produit:hover { transform: rotate(0deg) translateY(-12px) scale(1.05); box-shadow: 0 25px 50px rgba(0,0,0,0.3); }
 
-.produit:hover { transform: rotate(0deg) translateY(-12px) scale(1.05); box-shadow: 0 25px 50px rgba(0,0,0,0.3); }
+    .produit img {
+      width: 140px;
+      height: auto;
+      border-radius: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    }
 
-.produit img { width: 140px; height: auto; border-radius: 15px; margin-bottom: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.25); }
+    .produit h2 { color: #0b3d91; font-size: 1.2em; margin: 10px 0; }
 
-.produit h2 { color: #0b3d91; font-size: 1.2em; margin: 10px 0; }
+    .produit p { font-size: 0.95em; margin: 6px 0; }
 
-.produit p { font-size: 0.95em; margin: 6px 0; }
+    .produit button {
+      background-color: #0b3d91;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+      margin-top: 10px;
+    }
 
-.produit button {
-  background-color: #0b3d91;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.3s;
-  margin-top: 10px;
-}
+    .produit button:hover { background-color: #061f4b; transform: scale(1.08); }
 
-.produit button:hover { background-color: #061f4b; transform: scale(1.08); }
+    footer {
+      background-color: #0b3d91;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      margin-top: 50px;
+    }
 
-footer {
-  background-color: #0b3d91;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
-  margin-top: 50px;
-}
-
-/* --- Responsive --- */
-@media(max-width:768px){
-  .intro, .zone-info { padding: 40px 20px; }
-  .intro h2 { font-size: 2em; }
-  .zone-info h3 { font-size: 1.6em; }
-  .produits {
-    flex-wrap: nowrap;
-    justify-content: center;
-    gap: 15px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-  }
-  .produit {
-    width: 180px; /* 📱 plus petit sur téléphone */
-    flex: 0 0 auto;
-    scroll-snap-align: center;
-  }
-  .produit img { width: 120px; }
-  .produit p { font-size: 0.9em; }
-}
-</style>
+    @media(max-width:768px){
+      .intro { padding: 40px 20px; }
+      .intro h2 { font-size: 2em; }
+      .produits { flex-wrap: wrap; gap: 15px; }
+      .produit { width: 180px; }
+      .produit img { width: 120px; }
+      .produit p { font-size: 0.9em; }
+    }
+  </style>
 </head>
 <body>
 <header>
   <h1>Les Zebooks</h1>
   <nav>
     <a href="index.html">Accueil</a>
-    <a href="produit1.html">Nos Ebooks</a>
+    <a href="nos-ebooks.html">Nos eBooks</a>
     <a href="contact.html">Contact</a>
   </nav>
 </header>
 
 <section class="intro">
-  <h2>Transforme ton quotidien avec nos e-books !</h2>
-  <p>Des ressources simples, humaines et motivantes pour t’aider à progresser, apprendre et t’épanouir. Chaque e-book est pensé pour t’accompagner avec bienveillance et efficacité 🚀</p>
-</section>
-
-<section class="zone-info">
-  <h3>Pourquoi choisir Les Zebooks ?</h3>
-  <p>Parce qu’ici, tu n’achètes pas simplement un livre numérique : tu bénéficies d’un accompagnement complet. Des conseils pratiques, des astuces concrètes et une approche humaine, pour que chaque page te guide pas à pas vers tes objectifs 💪</p>
+  <h2>Bienvenue sur Les Zebooks</h2>
+  <p>Découvre nos e-books pensés pour t’aider à évoluer, progresser et t’inspirer chaque jour. Simples, motivants et concrets — ils t’accompagnent à chaque étape 💪📘</p>
 </section>
 
 <section class="produits">
   <div class="produit">
-    <a href="PRODU1.html">
+    <a href="produit1.html">
       <img src="image_PRODU1.jpg" alt="Guide Maigrir Rapidement">
       <h2>Maigrir Rapidement</h2>
-      <p>Une méthode claire, accessible et bienveillante pour perdre du poids durablement sans te priver.</p>
+      <p>Une méthode claire et bienveillante pour perdre du poids sans te priver, avec des astuces simples à suivre.</p>
       <p><strong>10€</strong></p>
-      <button>Je veux ce guide</button>
+      <button>Voir le guide</button>
     </a>
   </div>
 
   <div class="produit">
-    <a href="PRODU2.html">
+    <a href="produit2.html">
       <img src="image_PRODU2.jpg" alt="Montage Vidéo">
       <h2>Montage Vidéo</h2>
-      <p>Apprends à créer des vidéos captivantes grâce à un guide pratique, motivant et premium 🎬</p>
+      <p>Crée des vidéos captivantes et professionnelles grâce à un guide complet et motivant 🎬</p>
       <p><strong>15€</strong></p>
-      <button>Je veux ce guide</button>
+      <button>Voir le guide</button>
     </a>
   </div>
 </section>
@@ -191,6 +164,7 @@ footer {
 </footer>
 </body>
 </html>
+
 
 
 
