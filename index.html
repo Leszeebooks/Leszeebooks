@@ -37,7 +37,7 @@ nav a:hover {
   color: #000;
   transform: scale(1.1);
 }
-/* --- NOUVEAU STYLE POUR LES BOÎTES BLEU → BLANC --- */
+/* --- NOUVEAU STYLE POUR LES BOÎTES BLEU FONCÉ → BLANC --- */
 .intro {
   display: flex;
   flex-wrap: wrap;
@@ -48,17 +48,16 @@ nav a:hover {
   padding: 0 20px;
 }
 .intro-box {
-  background: linear-gradient(135deg, #0b3d91, #d0e4f7); /* Dégradé bleu → blanc */
+  background: linear-gradient(135deg, #0a2e5a, #d0e4f7); /* Dégradé bleu foncé → blanc bien visible */
   color: white;
   flex: 1 1 450px;
   border-radius: 25px;
   padding: 40px 50px;
   box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease; /* Seule la taille change au survol */
 }
 .intro-box:hover {
-  background: linear-gradient(135deg, #1a68d1, #e6f2ff); /* Changement subtil vers un bleu plus clair */
-  transform: translateY(-5px);
+  transform: scale(1.02); /* Effet d'agrandissement léger */
   box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 .intro-box h2 {
@@ -80,7 +79,7 @@ nav a:hover {
   font-size: 1.05em;
   line-height: 1.8;
 }
-/* --- STYLE POUR LES CARTES PRODUITS (bleu clair → blanc) --- */
+/* --- STYLE POUR LES CARTES PRODUITS (même effet) --- */
 .produits {
   display: flex;
   justify-content: center;
@@ -95,11 +94,10 @@ nav a:hover {
   box-shadow: 0 8px 25px rgba(0,0,0,0.15);
   text-align: center;
   padding: 25px;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease; /* Seule la taille change au survol */
 }
 .produit:hover {
-  background: linear-gradient(135deg, #f0f8ff, #b3d9ff); /* Changement vers un bleu encore plus clair */
-  transform: translateY(-5px);
+  transform: scale(1.02); /* Effet d'agrandissement léger */
   box-shadow: 0 12px 30px rgba(0,0,0,0.2);
 }
 .produit img {
@@ -108,10 +106,6 @@ nav a:hover {
   object-fit: cover;
   border-radius: 20px;
   margin-bottom: 20px;
-  transition: transform 0.3s;
-}
-.produit:hover img {
-  transform: scale(1.02); /* Légère augmentation de l'image */
 }
 .produit h3 {
   color: #0b3d91;
@@ -196,6 +190,7 @@ footer {
 </footer>
 </body>
 </html>
+
 
 
 
