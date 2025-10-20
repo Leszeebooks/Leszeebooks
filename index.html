@@ -1,188 +1,206 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Les Zebooks — Accueil</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-<style>
-body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #d0e4f7, #ffffff);
-  color: #333;
-  margin: 0;
-  overflow-x: hidden;
-}
-header {
-  background: linear-gradient(135deg, #0b3d91, #ffffff);
-  color: white;
-  padding: 25px 0;
-  text-align: center;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-}
-header h1 {
-  font-size: 2.5em;
-  margin: 0;
-  color: #fff;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-}
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 20px;
-  font-weight: bold;
-  transition: color 0.3s, transform 0.3s;
-}
-nav a:hover {
-  color: #000;
-  transform: scale(1.1);
-}
-/* --- BOÎTES D'ACCUEIL (dégradé bleu → blanc) --- */
-.intro {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  max-width: 1100px;
-  margin: 70px auto 30px;
-  padding: 0 20px;
-}
-.intro-box {
-  background: linear-gradient(135deg, #0b3d91, #ffffff); /* Dégradé bleu menu → blanc */
-  color: white;
-  flex: 1 1 450px;
-  border-radius: 25px;
-  padding: 40px 50px;
-  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-}
-.intro-box h2 {
-  font-size: 1.8em;
-  margin-bottom: 15px;
-  position: relative;
-  padding-bottom: 10px;
-}
-.intro-box h2::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 50px;
-  height: 3px;
-  background: rgba(255,255,255,0.7);
-}
-.intro-box p {
-  font-size: 1.05em;
-  line-height: 1.8;
-}
-/* --- SECTION PRODUITS (style de base) --- */
-.produits {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  padding: 40px 0;
-}
-.produit {
-  width: 280px;
-  background: white;
-  border-radius: 25px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-  text-align: center;
-  padding: 25px;
-  transition: transform 0.3s;
-}
-.produit:hover {
-  transform: translateY(-5px);
-}
-.produit img {
-  width: 100%;
-  height: 380px;
-  object-fit: cover;
-  border-radius: 20px;
-  margin-bottom: 20px;
-}
-.produit h3 {
-  color: #0b3d91;
-  font-size: 1.4em;
-  margin-bottom: 10px;
-}
-.produit p {
-  font-size: 1em;
-  color: #555;
-  margin-bottom: 15px;
-}
-.produit button {
-  background-color: #0b3d91;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-.produit button:hover {
-  background-color: #061f4b;
-}
-footer {
-  background-color: #0b3d91;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
-  margin-top: 50px;
-}
-@media(max-width:768px){
-  .produits { flex-direction: column; align-items: center; }
-  .produit { width: 80%; }
-  .intro { flex-direction: column; align-items: center; }
-  .intro-box { width: 90%; }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les Zebooks — Des guides pour réussir, simplement</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset et base */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa, #e8f0f8);
+      color: #333;
+      line-height: 1.6;
+    }
+    /* En-tête */
+    header {
+      background: linear-gradient(135deg, #0b3d91, #1a68d1);
+      color: white;
+      padding: 1rem 0;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffd700;
+    }
+    /* Hero section */
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: linear-gradient(135deg, #e8f0f8, #f5f7fa);
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      color: #0b3d91;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      color: #555;
+    }
+    /* Section "Pourquoi nous ?" */
+    .why-us {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .why-us-card {
+      background: white;
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      flex: 1 1 300px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .why-us-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+    .why-us-card h3 {
+      color: #0b3d91;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    /* Section produits */
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 3rem 1rem;
+      background: #f9f9f9;
+    }
+    .product-card {
+      background: white;
+      border-radius: 15px;
+      padding: 1.5rem;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      width: 300px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    .product-card h3 {
+      color: #0b3d91;
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+    .product-card p {
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .product-card .cta-button {
+      background: #0b3d91;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .product-card .cta-button:hover {
+      background: #062a5e;
+    }
+    /* Pied de page */
+    footer {
+      background: #0b3d91;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      .why-us { flex-direction: column; }
+      .products { flex-direction: column; align-items: center; }
+      .product-card { width: 90%; }
+    }
+  </style>
 </head>
 <body>
-<header>
-  <h1>Les Zebooks</h1>
-  <nav>
-    <a href="/Leszeebooks/index.html">Accueil</a>
-    <a href="/Leszeebooks/PRODU1.html">Nos Ebooks</a>
-    <a href="/Leszeebooks/contact.html">Contact</a>
-  </nav>
-</header>
-<section class="intro">
-  <div class="intro-box">
-    <h2>Notre mission</h2>
+  <header>
+    <h1>Les Zebooks</h1>
+    <nav>
+      <a href="/Leszeebooks/index.html">Accueil</a>
+      <a href="/Leszeebooks/PRODU1.html">Nos Guides</a>
+      <a href="/Leszeebooks/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Des guides pour réussir,<br>sans prise de tête</h2>
     <p>
-      Chez <strong>Les Zebooks</strong>, notre mission est de te fournir des outils <strong>concrets et accessibles</strong> pour t’aider à atteindre tes objectifs.
-      Nos e-books sont conçus pour être <strong>simples, motivants et efficaces</strong>, sans jargon compliqué.
-      Que tu veuilles perdre du poids, apprendre une nouvelle compétence ou te lancer dans un projet, nous t’accompagnons avec des méthodes <strong>testées et adaptées</strong> à ton rythme.
+      Chez <strong>Les Zebooks</strong>, on te donne les outils pour atteindre tes objectifs,
+      <strong>sans théorie inutile</strong>. Nos guides sont clairs, concrets et conçus pour t’aider à agir <strong>dès aujourd’hui</strong>.
     </p>
-  </div>
-  <div class="intro-box">
-    <h2>Pourquoi nous choisir ?</h2>
-    <p>
-      💡 <strong>Une approche humaine</strong> : Nos guides sont écrits par des passionnés qui comprennent tes défis.
-      📚 <strong>Des conseils clairs</strong> : Pas de théorie inutile, seulement des étapes pratiques pour des résultats visibles.
-      🌟 <strong>Un accompagnement bienveillant</strong> : Nous croyons en ta capacité à réussir, et nos e-books te donnent les clés pour y parvenir <strong>sans stress ni pression</strong>.
-    </p>
-  </div>
-</section>
-<section class="produits">
-  <div class="produit">
-    <img src="image_PRODU1.jpg" alt="Ebook Maigrir Rapidement">
-    <h3>Maigrir Rapidement</h3>
-    <p>Découvre une méthode simple et efficace pour perdre du poids durablement, sans frustration.</p>
-    <button onclick="window.location.href='/Leszeebooks/PRODU1.html'">Découvrir le guide</button>
-  </div>
-  <div class="produit">
-    <img src="image_PRODU2.jpg" alt="Ebook Montage Vidéo">
-    <h3>Montage Vidéo</h3>
-    <p>Apprends à monter des vidéos professionnelles avec des techniques accessibles à tous.</p>
-    <button onclick="window.location.href='/Leszeebooks/PRODU2.html'">Découvrir le guide</button>
-  </div>
-</section>
-<footer>
-  <p>© 2025 Les Zebooks — Tous droits réservés</p>
-</footer>
+  </section>
+
+  <section class="why-us">
+    <div class="why-us-card">
+      <h3>📚 Des guides accessibles</h3>
+      <p>Pas de jargon compliqué. Juste des conseils <strong>pratiques et faciles à appliquer</strong>, même si tu débutes.</p>
+    </div>
+    <div class="why-us-card">
+      <h3>💡 Une approche bienveillante</h3>
+      <p>On te motive sans te mettre la pression. Parce que <strong>les résultats durables</strong> viennent de la régularité, pas de la culpabilité.</p>
+    </div>
+    <div class="why-us-card">
+      <h3>🎯 Des résultats concrets</h3>
+      <p>Nos méthodes sont <strong>testées et approuvées</strong> par des centaines de personnes. Pas de promesses creuses, juste des outils qui marchent.</p>
+    </div>
+  </section>
+
+  <section class="products">
+    <div class="product-card">
+      <img src="image_PRODU1.jpg" alt="Guide Maigrir Rapidement">
+      <h3>Maigrir Rapidement</h3>
+      <p>Perdez du poids durablement avec une méthode <strong>simple et motivante</strong>, sans régime restrictif.</p>
+      <button class="cta-button" onclick="window.location.href='/Leszeebooks/PRODU1.html'">Découvrir le guide</button>
+    </div>
+    <div class="product-card">
+      <img src="image_PRODU2.jpg" alt="Guide Montage Vidéo">
+      <h3>Montage Vidéo</h3>
+      <p>Apprenez à monter des vidéos <strong>professionnelles et captivantes</strong>, même si vous débutez.</p>
+      <button class="cta-button" onclick="window.location.href='/Leszeebooks/PRODU2.html'">Découvrir le guide</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Les Zebooks — Tous droits réservés</p>
+  </footer>
 </body>
 </html>
 
