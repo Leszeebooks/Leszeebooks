@@ -1,212 +1,171 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nos eBooks - Les Zebooks</title>
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            background: linear-gradient(135deg, #007bff, #00c6ff);
-            color: white;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(0, 0, 0, 0.3);
-            padding: 15px 30px;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 1.8em;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #ffe082;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        h2 {
-            text-align: center;
-            font-size: 2em;
-            margin-bottom: 10px;
-        }
-
-        .category {
-            margin-bottom: 50px;
-        }
-
-        .category h3 {
-            text-align: left;
-            border-left: 5px solid #ffe082;
-            padding-left: 10px;
-            font-size: 1.5em;
-            margin-bottom: 20px;
-        }
-
-        .products {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-
-        .product {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 20px;
-            text-align: center;
-            width: 300px;
-            transition: transform 0.3s, background 0.3s;
-        }
-
-        .product:hover {
-            transform: translateY(-8px);
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        .product img {
-            width: 100%;
-            height: 200px;
-            border-radius: 10px;
-            object-fit: cover;
-        }
-
-        .product h4 {
-            margin-top: 15px;
-            font-size: 1.2em;
-        }
-
-        .product p {
-            font-size: 0.95em;
-            line-height: 1.5;
-            margin-top: 10px;
-        }
-
-        footer {
-            text-align: center;
-            background: rgba(0, 0, 0, 0.3);
-            padding: 20px;
-            font-size: 0.9em;
-            margin-top: 40px;
-        }
-
-        @media (max-width: 768px) {
-            .product {
-                width: 90%;
-            }
-
-            header {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            nav {
-                margin-top: 10px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nos Ebooks — Les Zebooks</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Style cohérent avec ton site */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #d0e4f7, #ffffff);
+      color: #333;
+      margin: 0;
+      overflow-x: hidden;
+    }
+    header {
+      background: linear-gradient(135deg, #0b3d91, #ffffff);
+      color: white;
+      padding: 25px 0;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+      color: #fff;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      transition: color 0.3s, transform 0.3s;
+    }
+    nav a:hover {
+      color: #000;
+      transform: scale(1.1);
+    }
+    /* Style spécifique pour cette page */
+    .main-title {
+      text-align: center;
+      padding: 2rem 0;
+      color: #0b3d91;
+      font-size: 2.2rem;
+      font-weight: 600;
+    }
+    .categories {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .category {
+      background: white;
+      border-radius: 15px;
+      padding: 1.5rem;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      width: 300px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .category:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+    .category h3 {
+      color: #0b3d91;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+    .category p {
+      color: #555;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+    .category a {
+      display: inline-block;
+      background: #0b3d91;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .category a:hover {
+      background: #062a5e;
+    }
+    .category img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    /* Catégories par thème */
+    .category.bien-etre { border-top: 4px solid #1dd1a1; }
+    .category.creativite { border-top: 4px solid #ff6b35; }
+    .category.technique { border-top: 4px solid #4a90e2; }
+    /* Footer */
+    footer {
+      background-color: #0b3d91;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      margin-top: 2rem;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      .categories { flex-direction: column; align-items: center; }
+      .category { width: 90%; }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Les Zebooks</h1>
-        <nav>
-            <a href="index.html">Accueil</a>
-            <a href="nos-ebooks.html">Nos eBooks</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+  <header>
+    <h1>Les Zebooks</h1>
+    <nav>
+      <a href="/Leszeebooks/index.html">Accueil</a>
+      <a href="/Leszeebooks/nos-ebooks.html">Nos Ebooks</a>
+      <a href="/Leszeebooks/contact.html">Contact</a>
+    </nav>
+  </header>
 
-    <div class="container">
-        <h2>Découvrez nos eBooks triés par catégorie</h2>
+  <h2 class="main-title">Tous nos ebooks</h2>
 
-        <!-- Catégorie 1 -->
-        <div class="category">
-            <h3>Santé & Bien-être</h3>
-            <div class="products">
-                <div class="product">
-                    <img src="images/maigrir-rapidement.jpg" alt="Maigrir rapidement">
-                    <h4>Maigrir rapidement</h4>
-                    <p>Des conseils simples et accessibles pour perdre du poids sans frustration. Un guide complet pour ceux qui veulent adopter une routine plus saine et durable, soutenu par des experts du bien-être.</p>
-                </div>
-                <div class="product">
-                    <img src="images/sommeil-reparateur.jpg" alt="Sommeil réparateur">
-                    <h4>Sommeil réparateur</h4>
-                    <p>Apprends à retrouver un vrai repos grâce à des techniques naturelles et efficaces. Idéal pour mieux récupérer et retrouver ton énergie chaque jour.</p>
-                </div>
-                <div class="product">
-                    <img src="images/equilibre-mental.jpg" alt="Équilibre mental">
-                    <h4>Équilibre mental</h4>
-                    <p>Un eBook inspirant pour retrouver la sérénité, réduire le stress et renforcer ta confiance au quotidien, avec des conseils avisés d’experts en psychologie positive.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Catégorie 2 -->
-        <div class="category">
-            <h3>Développement personnel</h3>
-            <div class="products">
-                <div class="product">
-                    <img src="images/reussir-sa-vie.jpg" alt="Réussir sa vie">
-                    <h4>Réussir sa vie</h4>
-                    <p>Découvre les clés de la réussite personnelle et professionnelle, grâce à des stratégies claires et des exemples inspirants de personnes ayant franchi leurs propres obstacles.</p>
-                </div>
-                <div class="product">
-                    <img src="images/confiance-en-soi.jpg" alt="Confiance en soi">
-                    <h4>Confiance en soi</h4>
-                    <p>Apprends à t’affirmer et à prendre confiance en tes capacités. Des conseils sincères, concrets et applicables dès aujourd’hui.</p>
-                </div>
-                <div class="product">
-                    <img src="images/motivation-quotidienne.jpg" alt="Motivation quotidienne">
-                    <h4>Motivation quotidienne</h4>
-                    <p>Une dose d’énergie et de positivité chaque jour. Cet eBook t’accompagne pour maintenir une motivation durable et avancer vers tes objectifs sans abandonner.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Catégorie 3 -->
-        <div class="category">
-            <h3>Nutrition & Fitness</h3>
-            <div class="products">
-                <div class="product">
-                    <img src="images/recettes-proteinees.jpg" alt="Recettes protéinées">
-                    <h4>Recettes protéinées</h4>
-                    <p>Des repas savoureux, équilibrés et simples à préparer. Idéal pour ceux qui veulent garder la forme tout en se faisant plaisir.</p>
-                </div>
-                <div class="product">
-                    <img src="images/entrainement-maison.jpg" alt="Entraînement à la maison">
-                    <h4>Entraînement à la maison</h4>
-                    <p>Un programme clair et adapté à tous les niveaux pour progresser sans équipement et transformer ton corps, même depuis ton salon.</p>
-                </div>
-                <div class="product">
-                    <img src="images/alimentation-saine.jpg" alt="Alimentation saine">
-                    <h4>Alimentation saine</h4>
-                    <p>Adopte une alimentation équilibrée et durable, avec des conseils simples à appliquer au quotidien pour améliorer ta santé et ton énergie.</p>
-                </div>
-            </div>
-        </div>
+  <div class="categories">
+    <!-- Catégorie Bien-être -->
+    <div class="category bien-etre">
+      <img src="image_PRODU1.jpg" alt="Ebook Maigrir Rapidement">
+      <h3>Bien-être</h3>
+      <p>Des guides pour t’aider à te sentir mieux dans ton corps et dans ta tête, sans frustration.</p>
+      <a href="/Leszeebooks/PRODU1.html">Voir le guide</a>
     </div>
 
-    <footer>
-        © 2025 Les Zebooks - Tous droits réservés
-    </footer>
+    <!-- Catégorie Créativité -->
+    <div class="category creativite">
+      <img src="image_PRODU2.jpg" alt="Ebook Montage Vidéo">
+      <h3>Créativité</h3>
+      <p>Apprends à créer des contenus captivants, même si tu débutes.</p>
+      <a href="/Leszeebooks/PRODU2.html">Voir le guide</a>
+    </div>
+
+    <!-- Catégorie Technique (pour tes futurs ebooks) -->
+    <div class="category technique">
+      <img src="https://via.placeholder.com/300x200/4a90e2/ffffff?text=À+venir" alt="Ebook Technique">
+      <h3>Technique</h3>
+      <p>Des guides pour maîtriser les outils et logiciels comme un pro. <em>Bientôt disponible !</em></p>
+      <a href="#!" style="opacity: 0.7; cursor: not-allowed;">Prochainement</a>
+    </div>
+
+    <!-- Catégorie Développement Personnel -->
+    <div class="category bien-etre">
+      <img src="https://via.placeholder.com/300x200/1dd1a1/ffffff?text=À+venir" alt="Ebook Développement Personnel">
+      <h3>Développement Personnel</h3>
+      <p>Des méthodes pour booster ta confiance et ta productivité. <em>En préparation !</em></p>
+      <a href="#!" style="opacity: 0.7; cursor: not-allowed;">Prochainement</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Les Zebooks — Tous droits réservés</p>
+  </footer>
 </body>
 </html>
 
